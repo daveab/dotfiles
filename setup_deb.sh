@@ -32,9 +32,14 @@ PACKAGES=(
 	# essential tools
 	build-essential
 	autoconf
+	autoconf-doc
 	doxygen
+	doxygen-doc
 	libtool
+	libtool-doc
 	swig
+	swig-doc
+	swig-examples
 
 	# java jdk (jni, zookeeper)
 	#openjdk-6-jdk
@@ -44,6 +49,8 @@ PACKAGES=(
 
 	# source control
 	git
+	git-doc
+	gitk
 	mercurial
 	subversion
 
@@ -76,10 +83,15 @@ xx_PACKAGES=(
 	python-all-dev
 	python-virtualenv
 	python-pip
+
+	python3
+	python3-all
+	python3-all-dev
 )
 
 echo "Installing packages..."
 apt-get -qy install ${PACKAGES[@]}
+apt-get -qy install ${xx_PACKAGES[@]}
 
 exit
 setup-work-dir
